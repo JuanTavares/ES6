@@ -12,6 +12,9 @@ class NegociacaoController {
 
     adiciona(event) {
         event.preventDefault();
-        alert('Chamei ação no controller');
+        
+        console.log(this.inputData.value);
+        console.log(this.inputQuantidade.value);
+        console.log(this.inputValor.value);
     }
 }
