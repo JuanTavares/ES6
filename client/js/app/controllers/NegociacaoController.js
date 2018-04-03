@@ -20,6 +20,6 @@ class NegociacaoController {
         );
 
         console.log(negociacao);
-
+        console.log(DateHelper.dataParaTexto(negociacao.data));
     }
 }
