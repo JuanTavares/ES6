@@ -5,7 +5,7 @@ class DateHelper {
     }
 
     static textoParaData(texto) {
-        return new Date(...texto._inputData.value.split('-').map((item, indice) => item - indice % 2));
+        return new Date(...texto.split('-').map((item, indice) => item - indice % 2));
     }
 
     static dataParaTexto(data) {
