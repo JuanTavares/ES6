@@ -1,10 +1,10 @@
 class DateHelper {
 
-    textoParaData(texto) {
+    static textoParaData(texto) {
 
     }
 
-    dataParaTexto(data) {
+    static dataParaTexto(data) {
 
     }
 
