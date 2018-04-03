@@ -21,5 +21,15 @@ class NegociacaoController {
 
         console.log(negociacao);
         console.log(DateHelper.dataParaTexto(negociacao.data));
+        this._limpaFormulario();
     }
+
+    _limpaFormulario() {
+        this._inputData.value = '';
+        this._inputQuantidade.value = 1;
+        this._inputValor.value = 0.0;
+
+        this._inputData.focus();
+    }
+
 }
