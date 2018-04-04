@@ -9,4 +9,7 @@ class ListaNegociacoes {
         this._negociacoes.push(negociacao);
     }
 
+    get negociacoes() {
+        return this._negociacoes;
+    }
 }
