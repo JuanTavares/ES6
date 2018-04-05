@@ -22,7 +22,7 @@ class NegociacoesView {
             <tfoot>
             </tfoot>
         </table>
-        `
+        `;
     }
 
 }
