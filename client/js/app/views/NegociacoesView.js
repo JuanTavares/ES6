@@ -7,7 +7,8 @@ class NegociacoesView {
     }
 
     _template() {
-        `
+
+        return `
         <table class="table table-hover table-bordered">
             <thead>
                 <tr>
@@ -26,5 +27,11 @@ class NegociacoesView {
         </table>
         `;
     }
+
+    update() {
+
+        this._elemento.innerHTML = this._template;
+    }
+
 
 }
