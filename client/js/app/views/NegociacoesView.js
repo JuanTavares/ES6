@@ -1,6 +1,8 @@
 class NegociacoesView {
 
-    constructor() {
+    constructor(elemento) {
+
+        this._elemento = elemento;
 
     }
 
