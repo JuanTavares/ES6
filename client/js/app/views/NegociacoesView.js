@@ -6,7 +6,7 @@ class NegociacoesView {
 
     }
 
-    _template() {
+    _template(model) {
 
         return `
         <table class="table table-hover table-bordered">
