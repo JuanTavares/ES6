@@ -34,6 +34,10 @@ class NegociacoesView {
             </tbody>
 
             <tfoot>
+                <tfoot>
+                <td colspan="3"></td>
+                <td>
+                </td>
             </tfoot>
         </table>
         `;
