@@ -2,7 +2,7 @@ class MensagemView extends View {
 
     constructor(elemento) {
 
-        this._elemento = elemento;
+        super(elemento);
 
     }
 
