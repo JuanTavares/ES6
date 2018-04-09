@@ -1,4 +1,4 @@
-class MensagemView {
+class MensagemView extends View {
 
     constructor(elemento) {
 
