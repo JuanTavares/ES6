@@ -5,6 +5,11 @@ class View {
         this._elemento = elemento;
     }
 
+    template() {
+
+        throw new Error(`O método "template()" precisa ser sobrescrito`);
+    }
+
     update(model) {
 
         this._elemento.innerHTML = this._template(model);
