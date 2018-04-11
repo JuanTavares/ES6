@@ -34,8 +34,10 @@ class NegociacaoController {
     apaga() {
 
         this._listaNegociacoes.esvazia();
-        this._negociacoesView.update();
+        this._negociacoesView.update(this._listaNegociacoes);
 
+        this._mensagem.texto = `Lista de negociações apagada com sucesso!`;
+        this._mensagemView.update(this._mensagem);
     }
 
     _limpaFormulario() {
