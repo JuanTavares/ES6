@@ -31,6 +31,13 @@ class NegociacaoController {
         console.log(this._listaNegociacoes.negociacoes)
     }
 
+    apaga() {
+
+        this._listaNegociacoes.esvazia();
+        this._negociacoesView.update();
+
+    }
+
     _limpaFormulario() {
         this._inputData.value = '';
         this._inputQuantidade.value = 1;
