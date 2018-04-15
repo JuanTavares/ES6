@@ -23,12 +23,9 @@ class NegociacaoController {
         event.preventDefault();
 
         this._listaNegociacoes.adiciona(this._criaNegociacao());
-
         this._mensagem.texto = `Negociação adicionada com sucesso!`;
-        this._mensagemView.update(this._mensagem);
+        
         this._limpaFormulario();
-
-        console.log(this._listaNegociacoes.negociacoes)
     }
 
     apaga() {
@@ -36,7 +33,6 @@ class NegociacaoController {
         this._listaNegociacoes.esvazia();
 
         this._mensagem.texto = `Lista de negociações apagada com sucesso!`;
-        this._mensagemView.update(this._mensagem);
     }
 
     _limpaFormulario() {
