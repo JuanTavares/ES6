@@ -8,4 +8,9 @@ class ProxyFactory {
             }
         })
     }
+
+    static _isFunction(func) {
+        return typeof(func) == typeof(Function);
+    }
+
 }
