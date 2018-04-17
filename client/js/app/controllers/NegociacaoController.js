@@ -13,9 +13,9 @@ class NegociacaoController {
             new NegociacoesView($('#negociacoesView')),
             'adiciona', 'esvazia')
 
-            this._mensagem = new Bind(
-                new Mensagem(), new MensagemView($('#mensagemView')),
-                'texto');
+        this._mensagem = new Bind(
+            new Mensagem(), new MensagemView($('#mensagemView')),
+            'texto');
     }
 
 
@@ -24,13 +24,19 @@ class NegociacaoController {
 
         this._listaNegociacoes.adiciona(this._criaNegociacao());
         this._mensagem.texto = `Negociação adicionada com sucesso!`;
-        
+
         this._limpaFormulario();
     }
 
     importaNegociacoes() {
 
-        
+        let xhr = new XMLHttpRequest();
+
+        /* configurações */
+        xhr.open('GET', 'negociacoes/semana');
+
+        /* executa */
+        xhr.send();
 
     }
 
