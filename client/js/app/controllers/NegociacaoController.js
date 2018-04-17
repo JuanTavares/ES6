@@ -36,6 +36,9 @@ class NegociacaoController {
         xhr.open('GET', 'negociacoes/semana');
 
         /* executa */
+        xhr.onreadystatechange = () => {
+
+        }
         xhr.send();
 
     }
