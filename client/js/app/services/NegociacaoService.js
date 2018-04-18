@@ -1,6 +1,6 @@
 class NegociacaoService {
 
-    obterNegociacoesDaSemana() {
+    obterNegociacoesDaSemana(cb) {
 
         let xhr = new XMLHttpRequest();
 
@@ -21,12 +21,10 @@ class NegociacaoService {
                             objeto.valor))
                         .forEach(negociacao =>
                             this._listaNegociacoes.adiciona(negociacao));
-                    this._mensagem.texto = 'Negociações importadas com sucesso.';
 
                 } else {
 
                     console.log(xhr.responseText);
-                    this._mensagem.texto = 'Não foi possível obter as negociações.';
 
                 }
             }

@@ -31,7 +31,9 @@ class NegociacaoController {
     importaNegociacoes() {
 
         let service = new NegociacaoService();
-        service.obterNegociacoesDaSemana;
+        service.obterNegociacoesDaSemana(() => {
+            
+        });
 
     }
 
