@@ -1,5 +1,5 @@
 class ListaNegociacoes {
-    constructor(trap) {
+    constructor() {
 
         this._negociacoes = [];
     }

@@ -47,6 +47,8 @@ class NegociacaoController {
                         new Date(objeto.data),
                         objeto.quantidade,
                         objeto.valor))
+                    .forEach(negociacao => 
+                        this._listaNegociacoes.adiciona(negociacao));
                 } else {
                     console.log('Não foi possível obter as negociações do servidor.')
                 }
