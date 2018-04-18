@@ -14,16 +14,15 @@ class NegociacaoService {
                 if (xhr.status == 200) {
                     console.log('Obtendo as negociações do servidor.')
 
-                    JSON.parse(xhr.responseText)
+                    cb(null, JSON.parse(xhr.responseText)
                         .map(objeto => new Negociacao(
                             new Date(objeto.data),
                             objeto.quantidade,
-                            objeto.valor))
-                        .forEach(negociacao =>
-                            this._listaNegociacoes.adiciona(negociacao));
+                            objeto.valor)));
 
                 } else {
 
+                    cb('Não foi possível obter as negociações da semana', null);
                     console.log(xhr.responseText);
 
                 }
