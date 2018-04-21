@@ -66,4 +66,9 @@ class NegociacaoController {
         );
 
     }
+
+    ordena(coluna) {
+        
+    }
+
 }
