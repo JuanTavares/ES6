@@ -11,7 +11,7 @@ class NegociacaoController {
         this._listaNegociacoes = new Bind(
             new ListaNegociacoes(),
             new NegociacoesView($('#negociacoesView')),
-            'adiciona', 'esvazia')
+            'adiciona', 'esvazia', 'ordena')
 
         this._mensagem = new Bind(
             new Mensagem(), new MensagemView($('#mensagemView')),
@@ -68,7 +68,8 @@ class NegociacaoController {
     }
 
     ordena(coluna) {
-        
+
+        this._listaNegociacoes.ordena((a, b) => a[coluna] - b[coluna]);
     }
 
 }
