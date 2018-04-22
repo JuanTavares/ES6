@@ -7,7 +7,25 @@ class ConnectionFactory {
 
     static getConnection() {
 
+        return new Promise((resolve, reject) => {
 
+            let openRequest = window.indexedDB.open(`NegociacoesDB`, 1);
+
+            /*Tríade de chamadas*/
+            
+            openRequest.onupgradeneeded = e => {
+
+            }
+
+            openRequest.onsuccess = e => {
+
+            }
+
+            openRequest.onerror = e => {
+                
+            }
+
+        })
 
     }
 
