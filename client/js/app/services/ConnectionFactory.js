@@ -22,10 +22,17 @@ class ConnectionFactory {
             }
 
             openRequest.onerror = e => {
-                
+
             }
+            /*Fim Tríade */
 
         })
+
+    }
+
+    static _createStores(connection) {
+
+        
 
     }
 
