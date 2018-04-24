@@ -7,4 +7,10 @@ class NegociacaoDao {
 
     }
 
+    adiciona(negociacao) {
+
+        
+
+    }
+
 }
