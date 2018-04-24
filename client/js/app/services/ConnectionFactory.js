@@ -1,5 +1,12 @@
 var ConnectionFactory = (function() {
 
+    const stores = [`negociacoes`];
+    const version = 1;
+    const dbName = `NegociacoesDB`;
+
+    var connection = null;
+
+    var close = null;
 
     class ConnectionFactory {
 
@@ -12,7 +19,7 @@ var ConnectionFactory = (function() {
 
             return new Promise((resolve, reject) => {
 
-                let openRequest = window.indexedDB.open(`NegociacoesDB`, 1);
+                let openRequest = window.indexedDB.open(dbName, version);
 
                 /*Tríade de chamadas*/
 
