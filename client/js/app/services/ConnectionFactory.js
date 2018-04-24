@@ -70,7 +70,10 @@ var ConnectionFactory = (function() {
 
         static closeConnection() {
 
-
+            if (connection) {
+                close();
+                connection = null;
+            }
 
         }
 
