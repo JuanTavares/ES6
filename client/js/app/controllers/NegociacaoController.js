@@ -22,6 +22,7 @@ class NegociacaoController {
 
 
     adiciona(event) {
+        
         event.preventDefault();
 
         ConnectionFactory

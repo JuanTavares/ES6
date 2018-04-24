@@ -8,7 +8,7 @@ var ConnectionFactory = (function() {
 
     var close = null;
 
-    class ConnectionFactory {
+    return class ConnectionFactory {
 
         constructor() {
 
