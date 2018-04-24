@@ -46,5 +46,11 @@ var ConnectionFactory = (function() {
 
         }
 
+        static closeConnection() {
+
+            
+
+        }
+
     }
 })();
