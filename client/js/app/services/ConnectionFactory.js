@@ -31,9 +31,14 @@ var ConnectionFactory = (function() {
 
                 openRequest.onsuccess = e => {
 
+                    resolve(e.target.result);
+
                 }
 
                 openRequest.onerror = e => {
+
+                    console.log(e.target.error);
+                    reject(e.target.error.name);
 
                 }
                 /*Fim Tríade */
