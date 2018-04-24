@@ -25,6 +25,8 @@ var ConnectionFactory = (function() {
 
                 openRequest.onupgradeneeded = e => {
 
+
+
                 }
 
                 openRequest.onsuccess = e => {
@@ -42,13 +44,21 @@ var ConnectionFactory = (function() {
 
         static _createStores(connection) {
 
+            stores.forEach(store => {
 
+                if (connection.objectStoreNames.contains(store)) {
+                    connection.deleteObjectStore(store);
+                }
+                connection.createObjectStore(store, {
+                    autoIncrement: true
+                });
+            });
 
         }
 
         static closeConnection() {
 
-            
+
 
         }
 
