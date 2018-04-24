@@ -25,7 +25,7 @@ var ConnectionFactory = (function() {
 
                 openRequest.onupgradeneeded = e => {
 
-
+                    ConnectionFactory._createStores(e.target.result);
 
                 }
 
