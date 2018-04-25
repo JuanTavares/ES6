@@ -33,4 +33,13 @@ class NegociacaoDao {
 
     }
 
+    listaTodos() {
+
+        return new Promise((resolve, reject) => {
+
+
+            
+        })
+    }
+
 }
