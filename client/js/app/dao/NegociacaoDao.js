@@ -39,7 +39,7 @@ class NegociacaoDao {
 
             let cursor = this._connection
                 .transaction([this._store], `readwrite`)
-                .objectStore(thi._store)
+                .objectStore(this._store)
                 .openCursor();
 
             let negociacoes = [];
