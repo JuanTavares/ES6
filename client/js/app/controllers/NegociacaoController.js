@@ -33,6 +33,9 @@ class NegociacaoController {
 
     }
 
+    _init() {
+        
+    }
 
     adiciona(event) {
 
