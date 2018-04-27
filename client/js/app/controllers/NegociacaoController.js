@@ -36,6 +36,10 @@ class NegociacaoController {
                 this._mensagem.texto = erro;
             });
 
+            setInterval(() => {
+                this.importaNegociacoes();
+            }, 3000);
+
     }
 
     adiciona(event) {
