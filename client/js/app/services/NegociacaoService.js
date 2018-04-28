@@ -75,6 +75,7 @@ class NegociacaoService {
     }
 
     cadastra(negociacao) {
+        
         return ConnectionFactory
             .getConnection()
             .then(conexao => new NegociacaoDao(conexao))
@@ -95,7 +96,7 @@ class NegociacaoService {
             .catch(erro => {
                 console.log(erro);
                 throw new Error('Não foi possível obter as negociações')
-            })
+            });
     }
 
     apaga() {

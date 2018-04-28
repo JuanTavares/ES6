@@ -19,6 +19,8 @@ class NegociacaoController {
             new Mensagem(), new MensagemView($('#mensagemView')),
             'texto');
 
+        this._service = new NegociacaoService();
+
         this._init();
     }
 
