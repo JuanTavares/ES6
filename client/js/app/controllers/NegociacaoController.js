@@ -33,7 +33,7 @@ class NegociacaoController {
 
         setInterval(() => {
             this.importaNegociacoes();
-        }, 3000);
+        }, 10000);
 
     }
 
@@ -72,14 +72,13 @@ class NegociacaoController {
 
     apaga() {
 
-        ConnectionFactory
-            .getConnection()
-            .then(connection => new NegociacaoDao(connection))
-            .then(dao => dao.apagaTodos())
+        new NegociacaoService()
+            .apaga()
             .then(mensagem => {
                 this._mensagem.texto = mensagem;
                 this._listaNegociacoes.esvazia();
-            });
+            })
+            .catch(erro => this._mensagem.texto = erro);
 
     }
 
