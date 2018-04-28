@@ -19,17 +19,17 @@ class NegociacaoController {
             new Mensagem(), new MensagemView($('#mensagemView')),
             'texto');
 
-            this._init();
+        this._init();
     }
 
     _init() {
 
         this._service
-        .lista()
-        .then(negociacoes =>
-            negociacoes.forEach(negociacao =>
-                this._listaNegociacoes.adiciona(negociacao)))
-        .catch(erro => this._mensagem.texto = erro);
+            .lista()
+            .then(negociacoes =>
+                negociacoes.forEach(negociacao =>
+                    this._listaNegociacoes.adiciona(negociacao)))
+            .catch(erro => this._mensagem.texto = erro);
 
         setInterval(() => {
             this.importaNegociacoes();
@@ -47,8 +47,8 @@ class NegociacaoController {
             .cadastra(negociacao)
             .then(mensagem => {
                 this._listaNegociacoes.adiciona(negociacao);
-                this._mensagem.texto = mensagem; 
-                this._limpaFormulario();  
+                this._mensagem.texto = mensagem;
+                this._limpaFormulario();
             }).catch(erro => this._mensagem.texto = erro);
     }
 
