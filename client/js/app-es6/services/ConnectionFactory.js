@@ -2,9 +2,9 @@
     const version = 1;
     const dbName = `NegociacoesDB`;
 
-    var connection = null;
+    let connection = null;
 
-    var close = null;
+    let close = null;
 
     export class ConnectionFactory {
 
