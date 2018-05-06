@@ -10,7 +10,18 @@ plugins.push(
 );
 
 if (process.env.NODE_ENV == 'production') {
+
     plugins.push(new babiliPlugin());
+
+    plugins.push(new optimizeCSSAssetsPlugin({
+        cssProcessor: require('cssnano'),
+        cssProcessorOptions: {
+            discardComments: {
+                removeAll: true
+            }
+        },
+        canPrint: true
+    }));
 }
 
 module.exports = {
